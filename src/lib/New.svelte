@@ -1,7 +1,9 @@
 <script>
+  export let navigateToTodoList
   let slug = ""
   const handleSubmit = () => {
-    window.location.assign(`${slug}`)
+    history.pushState(null, null, slug)
+    navigateToTodoList(slug)
   }
 </script>
 
